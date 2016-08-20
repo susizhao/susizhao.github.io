@@ -3,7 +3,6 @@ venv3/*
 .checkmate/*
 *~
 output
-bower_components
 **/settings/common.py
 *.orig
 *#
