@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block indextitle %}{% endblock %}
+{% block windowtitle %}{{page.title}}{%endblock%}
+{% block content %}
+  <p class="clearfix">
+    <ul class="work-menu">
+      <li><a href="/package-design.html" {%if page.slug == 'package-design' %}class="active"{%endif%}>Package Design</a></li>
+      <li><a href="/product-design.html" {%if page.slug == 'product-design' %}class="active"{%endif%}>Product Design</a></li>
+      <li><a href="/logo-design.html" {%if page.slug == 'logo-design' %}class="active"{%endif%}>Logo Design</a></li>
+      <li><a href="/ux-design.html" {%if page.slug == 'ux-design' %}class="active"{%endif%}>UX Design</a></li>
+      <li><a href="/drawings.html" {%if page.slug == 'drawings' %}class="active"{%endif%}>Drawings</a></li>
+    </ul>
+  </p>
+
+
+  {% if page.slug != 'work' %}
+  <div id="images" class="carousel slide" data-ride="carousel">
+
+
+    <div class="carousel-controls">
+      <a href="#images" role="button" data-slide="prev">
+          &lt; previous
+      </a> -
+      <a href="#images" role="button" data-slide="next">
+        next &gt;
+      </a>
+    </div>
+
+    <div class="carousel-inner">
+      {{ page.content }}
+    </div>
+
+  </div>
+  {% else %}
+    {{ page.content }}
+  {% endif %}
+
+{% endblock %}
