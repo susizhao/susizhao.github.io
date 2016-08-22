@@ -68,9 +68,9 @@ translations: $(MO_FILES)
 %.mo: %.po
 	msgfmt $< -o $@
 
-html: translations
+html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-	cd $(OUTPUTDIR)/theme && bower install
+	bower install
 	pygmentize -S default -f html > $(OUTPUTDIR)/theme/css/pygments.css
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)/*
