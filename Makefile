@@ -70,7 +70,6 @@ translations: $(MO_FILES)
 
 html:
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-	bower install
 	pygmentize -S default -f html > $(OUTPUTDIR)/theme/css/pygments.css
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)/*

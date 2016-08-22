@@ -86,12 +86,16 @@ li.toolbar{
 p{
     margin-top:10px;
     margin-bottom:30px;
+    font-size:12px;
+}
+
+p.lead{
     font-size:16px;
 }
 
 h1{
     margin-bottom:30px;
-    font-size:40px;
+    font-size:34px;
 }
 
 h2{
@@ -302,7 +306,7 @@ ul.work-menu li a.active {
     }
 
     .navbar-right {
-        font-size:20px;
+        font-size:14px;
     }
 
     .part-2 img, .part-3 img {
@@ -361,6 +365,9 @@ ul.work-menu li a.active {
 
     ul.nav{
         position:relative;
+    }
+    ul.nav li {
+        margin-left:40px;
     }
 
     li.toolbar{
