@@ -1,3 +1,4 @@
+*.pid
 *tmp/*
 venv3/*
 .checkmate/*
